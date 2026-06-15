@@ -1,0 +1,16 @@
+{
+  "arguments": {
+    "element_index": 252,
+    "pid": 71215,
+    "window_id": 66281
+  },
+  "click_point": {
+    "x": 196.0,
+    "y": 373.0
+  },
+  "result_summary": "✅ Performed AXPress on [252] AXButton \"\".",
+  "t_ms_from_session_start": 13327,
+  "t_start_ms_from_session_start": 12265,
+  "timestamp": "1781492160.496",
+  "tool": "click"
+}

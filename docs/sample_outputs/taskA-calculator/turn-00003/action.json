@@ -1,0 +1,11 @@
+{
+  "arguments": {
+    "key": "4",
+    "pid": 71215
+  },
+  "result_summary": "✅ Pressed 4 on pid 71215.",
+  "t_ms_from_session_start": 3855,
+  "t_start_ms_from_session_start": 2790,
+  "timestamp": "1781492150.932",
+  "tool": "press_key"
+}

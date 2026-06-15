@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime trajectories (the committed reference snapshots are in
+# docs/sample_outputs/; the runtime trajectories/ dir is per-run).
+trajectories/
+
+# Local env / secrets
+.env
+*.local
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs / tmp
+*.log
+/tmp/
+
+# Saved-webpage asset directories (the *_files/ siblings of a .html save)
+# contain cached third-party JS/CSS including embedded Google API keys
+# that GitHub's secret scanner (rightly) refuses to publish. The .html
+# itself is enough.
+reference_file/*_files/
+reference_file/* — *_files/

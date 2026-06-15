@@ -1,0 +1,11 @@
+{
+  "arguments": {
+    "key": "escape",
+    "pid": 71215
+  },
+  "result_summary": "✅ Pressed escape on pid 71215.",
+  "t_ms_from_session_start": 1080,
+  "t_start_ms_from_session_start": 28,
+  "timestamp": "1781492148.156",
+  "tool": "press_key"
+}

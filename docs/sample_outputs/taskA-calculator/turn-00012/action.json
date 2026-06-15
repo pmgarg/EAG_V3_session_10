@@ -1,0 +1,14 @@
+{
+  "arguments": {
+    "keys": [
+      "command",
+      "c"
+    ],
+    "pid": 71215
+  },
+  "result_summary": "Pressed command+c on pid 71215.",
+  "t_ms_from_session_start": 16429,
+  "t_start_ms_from_session_start": 15410,
+  "timestamp": "1781492163.505",
+  "tool": "hotkey"
+}

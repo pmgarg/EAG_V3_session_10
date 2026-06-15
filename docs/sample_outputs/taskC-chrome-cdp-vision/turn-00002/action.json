@@ -1,0 +1,16 @@
+{
+  "arguments": {
+    "pid": 52949,
+    "x": 645,
+    "y": 372
+  },
+  "click_point": {
+    "x": 645.0,
+    "y": 372.0
+  },
+  "result_summary": "✅ Posted click to pid 52949.",
+  "t_ms_from_session_start": 23890,
+  "t_start_ms_from_session_start": 22817,
+  "timestamp": "1781492470.403",
+  "tool": "click"
+}

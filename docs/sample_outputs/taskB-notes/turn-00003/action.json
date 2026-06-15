@@ -1,0 +1,11 @@
+{
+  "arguments": {
+    "pid": 6501,
+    "text": "Session 10 demo 2026-06-15\n- Session 10 demo: Computer-Use agent\n- Cascade: Layer 1 → 2a → 2b → 3\n- demo recorded via cua-driver start_recording"
+  },
+  "result_summary": "✅ Inserted 144 char(s) into focused AXTextArea \"\".",
+  "t_ms_from_session_start": 6918,
+  "t_start_ms_from_session_start": 5902,
+  "timestamp": "1781492266.390",
+  "tool": "type_text"
+}

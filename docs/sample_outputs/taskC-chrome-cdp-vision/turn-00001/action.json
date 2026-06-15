@@ -1,0 +1,12 @@
+{
+  "arguments": {
+    "action": "execute_javascript",
+    "javascript": "(() => {  const title = document.title;  const results = document.querySelectorAll('#search a h3, h3');  const titles = Array.from(results)    .slice(0, 5).map(el => (el.textContent || '').trim());  return {title, count: titles.length, titles};})()",
+    "pid": 52949
+  },
+  "result_summary": "Missing required parameter: window_id",
+  "t_ms_from_session_start": 698,
+  "t_start_ms_from_session_start": 698,
+  "timestamp": "1781492447.211",
+  "tool": "page"
+}

@@ -1,0 +1,14 @@
+{
+  "arguments": {
+    "keys": [
+      "command",
+      "n"
+    ],
+    "pid": 6501
+  },
+  "result_summary": "Pressed command+n on pid 6501.",
+  "t_ms_from_session_start": 1059,
+  "t_start_ms_from_session_start": 46,
+  "timestamp": "1781492260.532",
+  "tool": "hotkey"
+}

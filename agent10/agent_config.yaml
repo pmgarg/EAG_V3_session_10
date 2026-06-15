@@ -1,0 +1,49 @@
+# Session 10 skills catalogue.
+#
+# In the Session 9 architecture, every skill is one yaml entry plus a
+# prompt file. The orchestrator's dispatch branch grows by one line per
+# new skill — never more. Session 10 introduces ONE new skill:
+#
+#   computer  — the Computer-Use skill. Runs the scan-act-verify loop
+#               with the five-layer cascade (Planner / Perception /
+#               Executor / Recovery / Vision) and dispatches MCP tool
+#               calls through cua-driver.
+#
+# All other skills (planner, distiller, formatter, ...) are inherited
+# from the Session 8/9 catalogue. We list `computer` here to demonstrate
+# the contract.
+
+computer:
+  prompt: prompts/planner.md
+  # `tools_allowed` is the list of MCP tools the skill may invoke.
+  # cua-driver exposes 34 tools; the assignment uses a subset.
+  tools_allowed:
+    - launch_app
+    - list_apps
+    - list_windows
+    - get_window_state
+    - click
+    - type_text
+    - press_key
+    - hotkey
+    - page                    # CDP path for Electron / Chrome
+    - get_accessibility_tree
+    - start_recording
+    - stop_recording
+    - check_permissions
+  # The dispatcher branch in skills.py adds ONE line:
+  #   if skill.name == "computer":
+  #       return computer_skill.run(goal=node.metadata["goal"], **opts)
+  # Anything more in the orchestrator is a reportable regression.
+  temperature: 0.4         # the planner-LLM temperature
+  max_tokens: 1500
+  description: >
+    Drive real desktop applications via cua-driver. Runs the four-layer
+    cascade: deterministic hotkeys → AX tree + cheap text LLM → vision.
+    Records every run via start_recording for replay.
+  internal_layers:
+    - planner            # goal → ordered subgoals (1 LLM call)
+    - perception         # AX tree → shortlist for the judge LLM
+    - executor           # scan → act → verify per subgoal
+    - recovery           # classify failures, escalate the layer
+    - vision             # screenshot + qwen2.5vl + click_xy
